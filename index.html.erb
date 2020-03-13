@@ -64,28 +64,29 @@
                 <%# <p class="lead">Genre:<%=library.genre%>
               <%# </div>
     <% end  %>
-<h2>Authors</h2>
+
+    <h2>Books</h2>
 		<table>
 			<thead>
 				<tr>
-					<th>Author</th>
-          <th>Book</th>
-          <th>Genre</th>
+					<th>Title</th>
+          <th>Author</th>
+          <th>Publisher</th>
 				</tr>
 			</thead>
-      <% @author.each do |author| %>
-      <%puts "#{author} a"%>
+      <% @book.each do |book| %>
+      <%puts "#{book} a"%>
 			<tbody>
 				<tr>
-          <td><%=author.name%></td>
-          <td><%=author.book%></td>
-          <td><%=author.genre%></td>
+          <td><%=book.title%></td>
+          <td><%=book.author%></td>
+          <td><%=book.punisher%></td>
 				</tr>
 			</tbody>
        <% end %>
 		</table>
 
-    <%= will_paginate @author, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, previous_label: "Back", next_label: "Next", inner_window: 1, outer_window: 0 %>
+    <%= will_paginate @book, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, previous_label: "Back", next_label: "Next", inner_window: 1, outer_window: 0 %>
 
 
 
