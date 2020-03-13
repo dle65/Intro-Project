@@ -1,0 +1,92 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/welcome/">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link active" href="/library/">Library<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/book/">Books</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/author/">Authors</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Genre
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/library/">Biography/Autobiography</a>
+          <a class="dropdown-item" href="/library/">Classic</a>
+          <a class="dropdown-item" href="/library/">Comic/Graphic Novel</a>
+          <a class="dropdown-item" href="/library/">Crime/Detective</a>
+          <a class="dropdown-item" href="/library/">Essay</a>
+          <a class="dropdown-item" href="/library/">Fairy tale</a>
+          <a class="dropdown-item" href="/library/">Fanfiction</a>
+          <a class="dropdown-item" href="/library/">Fantasy</a>
+          <a class="dropdown-item" href="/library/">Fiction in verse</a>
+          <a class="dropdown-item" href="/library/">Fiction narrative</a>
+          <a class="dropdown-item" href="/library/">Folklore</a>
+          <a class="dropdown-item" href="/library/">Historical fiction</a>
+          <a class="dropdown-item" href="/library/">Horror</a>
+          <a class="dropdown-item" href="/library/">Humor</a>
+          <a class="dropdown-item" href="/library/">Legend</a>
+          <a class="dropdown-item" href="/library/">Metafiction</a>
+          <a class="dropdown-item" href="/library/">Mystery</a>
+          <a class="dropdown-item" href="/library/">Mythology</a>
+          <a class="dropdown-item" href="/library/">Narrative nonfiction</a>
+          <a class="dropdown-item" href="/library/">Realistic fiction</a>
+          <a class="dropdown-item" href="/library/">Reference book</a>
+          <a class="dropdown-item" href="/library/">Science fiction</a>
+          <a class="dropdown-item" href="/library/">Short story</a>
+          <a class="dropdown-item" href="/library/">Speech</a>
+          <a class="dropdown-item" href="/library/">Suspense/Thriller</a>
+          <a class="dropdown-item" href="/library/">Western</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0" method="get" accept-charset="UTF-8" action="/search/">
+      <input class="form-control mr-sm-2" name= "q" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<%# <% @library.each do |library|
+              <div class="card-body">
+                <%# <h5 class="card-title">Books:<%=library.name%>
+                <%# <p class="lead">Authors:<%=library.author%>
+                <%# <p class="lead">Publisher:<%=library.punisher%>
+                <%# <p class="lead">Genre:<%=library.genre%>
+              <%# </div>
+    <% end  %>
+
+    <h2>Books</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>Title</th>
+          <th>Author</th>
+          <th>Publisher</th>
+				</tr>
+			</thead>
+      <% @book.each do |book| %>
+      <%puts "#{book} a"%>
+			<tbody>
+				<tr>
+          <td><%=book.title%></td>
+          <td><%=book.author%></td>
+          <td><%=book.punisher%></td>
+				</tr>
+			</tbody>
+       <% end %>
+		</table>
+
+    <%= will_paginate @book, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, previous_label: "Back", next_label: "Next", inner_window: 1, outer_window: 0 %>
+
+
+
