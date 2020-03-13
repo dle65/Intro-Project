@@ -1,0 +1,32 @@
+// Place all the styles related to the library controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+h1{
+  font-size: 2.5rem;
+}
+
+table
+{
+	border: 2px solid #FFF;
+	margin: auto;
+  width: 80%;
+  border-collapse: collapse;
+}
+
+table thead tr th
+{
+	background-color: yellow;
+	font-size: 20px;
+  padding: 8px 20px;
+}
+
+tbody tr td
+{
+	background-color: #FFF;
+}
+
+table tr td
+{
+	border-top: 1px solid yellow;
+	padding: 6px 20px;
+}
